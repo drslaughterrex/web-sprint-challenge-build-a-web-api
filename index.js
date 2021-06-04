@@ -12,3 +12,14 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Pull your server into this file and start it!
 */
+
+const dotenv = require("dotenv").config(); //eslint-disable-line
+const server = require("./api/server");
+
+const port = process.env.PORT || 5000;
+
+console.log(process.env.PORT);
+
+server.listen(port, () => {
+	console.log(`Listening on port ${port}`);
+});
